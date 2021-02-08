@@ -1,0 +1,45 @@
+﻿@model TP_Train_passages_objets.Controllers.Train
+
+@{
+
+}
+
+
+  
+<div>
+   
+    
+    <h2> Nombre de wagons : @Model.lstWagons.Count() </h2>
+   
+
+
+    @foreach(var wagon in Model.lstWagons)
+    {
+        <hr />
+<div>
+    <span>
+        <strong> Nombre de passagers </strong> : @wagon.listPassagers.Count()
+    </span> <br />
+
+    <span>
+        <strong>-wagon no </strong> :  @wagon.numero
+
+    </span>
+    <br />
+        <strong><span> -Passagers : </span></strong> 
+      @foreach(var passagers in wagon.listPassagers)
+      {
+          <br />
+
+          <span>
+              @passagers.nom
+
+          </span>
+      }
+
+</div>
+        
+    }
+
+
+</div>
